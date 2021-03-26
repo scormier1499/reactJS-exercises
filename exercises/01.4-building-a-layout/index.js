@@ -11,10 +11,21 @@ const data = {
 		label: "Go to wikipedia"
 	}
 };
-
 /**
  * define the variable 'content' here and fill it with the
  * needed code to render the bootstrap card
  **/
+const content = (
+		<div className="card m-5">
+			<img alt="Card image cap" className="card-img-top" src={data.image} />
+			<div className="card-body">
+				<h5 className="card-title">{data.cardTitle}</h5>
+				<p className="card-text">{data.cardDescription}</p>
+				<a href={data.button.url} className="btn btn-primary">
+					Go to wikipedia
+				</a>
+			</div>
+		</div>
+);
 
 ReactDOM.render(content, document.querySelector("#myDiv"));
